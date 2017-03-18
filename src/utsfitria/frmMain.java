@@ -59,13 +59,10 @@ public class frmMain extends javax.swing.JFrame {
         txtNo = new javax.swing.JTextField();
         txtDuduk = new javax.swing.JComboBox<>();
         txtHarga = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        tblData = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 204, 255));
@@ -143,7 +140,7 @@ public class frmMain extends javax.swing.JFrame {
         jLabel10.setBounds(350, 90, 160, 40);
 
         buttonGroup1.add(rbEkonomi);
-        rbEkonomi.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        rbEkonomi.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         rbEkonomi.setText("Ekonomi");
         rbEkonomi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -169,7 +166,7 @@ public class frmMain extends javax.swing.JFrame {
         txtStaAwal.setBounds(150, 90, 150, 30);
 
         buttonGroup1.add(rbEksekutif);
-        rbEksekutif.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        rbEksekutif.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         rbEksekutif.setText("Eksekutif");
         rbEksekutif.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -202,68 +199,51 @@ public class frmMain extends javax.swing.JFrame {
         getContentPane().add(panel1);
         panel1.setBounds(0, 100, 640, 220);
 
-        jButton1.setBackground(new java.awt.Color(102, 102, 255));
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        jButton1.setText("Save");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(650, 110, 90, 40);
-
         jButton2.setBackground(new java.awt.Color(102, 102, 255));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        jButton2.setText("Refresh");
+        jButton2.setText("See data");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton2);
-        jButton2.setBounds(650, 270, 90, 40);
-
-        jButton3.setBackground(new java.awt.Color(102, 102, 255));
-        jButton3.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        jButton3.setText("Print");
-        getContentPane().add(jButton3);
-        jButton3.setBounds(650, 230, 90, 40);
-
-        jButton4.setBackground(new java.awt.Color(102, 102, 255));
-        jButton4.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        jButton4.setText("Delete");
-        getContentPane().add(jButton4);
-        jButton4.setBounds(650, 190, 90, 40);
+        jButton2.setBounds(650, 260, 90, 40);
 
         jButton5.setBackground(new java.awt.Color(102, 102, 255));
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jButton5.setText("Clear");
-        getContentPane().add(jButton5);
-        jButton5.setBounds(650, 150, 90, 40);
-
-        tblData.setBackground(new java.awt.Color(204, 255, 204));
-        tblData.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        tblData.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "Nama", "No ID", "Stasiun Awal", "Stasiun Tujuan", "Tanggal", "Jenis", "Waktu", "Tempat Duduk", "Harga"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
             }
         });
-        jScrollPane1.setViewportView(tblData);
+        getContentPane().add(jButton5);
+        jButton5.setBounds(650, 210, 90, 40);
 
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(0, 330, 740, 140);
+        jButton3.setBackground(new java.awt.Color(102, 102, 255));
+        jButton3.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jButton3.setText("Save");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton3);
+        jButton3.setBounds(650, 160, 90, 40);
 
-        setSize(new java.awt.Dimension(760, 514));
+        jButton4.setBackground(new java.awt.Color(0, 51, 255));
+        jButton4.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jButton4.setText("Price");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton4);
+        jButton4.setBounds(650, 110, 90, 40);
+
+        setSize(new java.awt.Dimension(757, 364));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -279,44 +259,76 @@ public class frmMain extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtWaktuActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        frmData a = new frmData();
+        a.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+         txtNama.setText("");
+        txtNo.setText("");
+        txtHarga.setText("");
+        buttonGroup1.clearSelection();
+        txtStaAwal.setSelectedIndex(0);
+        txtStaTujuan.setSelectedIndex(0);
+        txtWaktu.setSelectedIndex(0);
+        txtDuduk.setSelectedIndex(0);
+        txtTanggal.setCalendar(null);
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         String tanggal = dateFormat.format(txtTanggal.getDate());
-         String JK = "";
-            if(rbEkonomi.isSelected()) 
+        
+        String JK = "";
+        if(rbEkonomi.isSelected()) 
             {
                 JK = "Ekonomi";
             }
-            else 
+            else
             {
                 JK = "Eksekutif";
             }
-            
-            if("".equals(txtNo.getText()) || "".equals(txtNama.getText()) || "".equals(txtStaAwal.getSelectedItem()) || "".equals(txtStaTujuan.getSelectedItem()) || "".equals(txtWaktu.getSelectedItem()) || "".equals(txtDuduk.getSelectedItem()) || tanggal.equals("") || JK.equals("")) 
+        if("".equals(txtNo.getText()) || "".equals(txtNama.getText()) || "".equals(txtStaAwal.getSelectedItem()) || "".equals(txtStaTujuan.getSelectedItem()) || tanggal.equals("") || "".equals(txtWaktu.getSelectedItem()) || JK.equals("") || "".equals(txtDuduk.getSelectedItem())) 
         {
             JOptionPane.showMessageDialog(this, "Harap Lengkapi Data","Error", JOptionPane.WARNING_MESSAGE);
-        }else 
-        {    
-            String SQL = "INSERT INTO tb_pesan (noID,namaPemesan,stasiunAwal,stasiunTujuan,tanggalBerangkat,jenisKereta,waktuBerangkat,tempatDuduk,Harga) "
-                    + "VALUES('"+txtNo.getText()+"','"+txtNama.getText()+"','"+txtStaAwal.getSelectedItem()+"','"+txtStaTujuan.getSelectedItem()+"','"+tanggal+"','"+JK+"','"+txtWaktu.getSelectedItem()+"','"+txtDuduk.getSelectedItem()+"')";
-            int status = 0;
+        }  else 
+        {      
+            String SQL = "INSERT INTO tb_pesan (noID,namaPemesan,stasiunAwal,stasiunTujuan,tanggalBerangkat,jenisKereta,waktuBerangkat,tempatDuduk,Harga)"
+                + "VALUES('"+txtNo.getText()+"','"+txtNama.getText()+"','"+txtStaAwal.getSelectedItem()+"','"+txtStaTujuan.getSelectedItem()+"','"+tanggal+"','"+JK+"','"+txtWaktu.getSelectedItem()+"','"+txtDuduk.getSelectedItem()+"','"+txtHarga.getText()+"')";
+        int status = 0;
              try {
                  status = dbKoneksi.execute(SQL);
              } catch (SQLException ex) {
                  Logger.getLogger(frmMain.class.getName()).log(Level.SEVERE, null, ex);
              }
-            if(status == 1)
+        if(status == 1){
+            JOptionPane.showMessageDialog(this, "Data berhasil ditambahkan", "Sukses", JOptionPane.INFORMATION_MESSAGE);
+        } else{
+            JOptionPane.showMessageDialog(this, "Data gagal ditambahkan", "Gagal", JOptionPane.WARNING_MESSAGE);
+        }
+   
+    }
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        String rupiah ="";
+        if(rbEkonomi.isSelected()) 
             {
-                JOptionPane.showMessageDialog(this, "Data berhasil ditambahkan","Sukses", JOptionPane.INFORMATION_MESSAGE);
-                selectData();
+                rupiah = "15000";
             }
             else
             {
-                JOptionPane.showMessageDialog(this, "Data gagal ditambahkan","Sukses", JOptionPane.WARNING_MESSAGE);
+                rupiah = "85000";
             }
-        }
-    }//GEN-LAST:event_jButton1ActionPerformed
+        txtHarga.setText(rupiah);
+        
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -355,7 +367,6 @@ public class frmMain extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -371,12 +382,10 @@ public class frmMain extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JScrollPane jScrollPane1;
     private java.awt.Panel panel1;
     private java.awt.Panel panel2;
     private javax.swing.JRadioButton rbEkonomi;
     private javax.swing.JRadioButton rbEksekutif;
-    private javax.swing.JTable tblData;
     private javax.swing.JComboBox<String> txtDuduk;
     private javax.swing.JTextField txtHarga;
     private javax.swing.JTextField txtNama;
@@ -387,45 +396,5 @@ public class frmMain extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> txtWaktu;
     // End of variables declaration//GEN-END:variables
 
-    private void selectData() {
-        String kolom[] = {"noID","namaPemesan","stasiunAwal","stasiunTujuan","tanggalBerangkat","jenisKereta","waktuBerangkat","tempatDuduk","Harga"};
-        DefaultTableModel dtm = new DefaultTableModel(null, kolom);
-        String SQL = "SELECT * FROM tb_pesan";
-        ResultSet rs = null;
-        try {
-            rs = dbKoneksi.executeQuery(SQL);
-        } catch (SQLException ex) {
-            Logger.getLogger(frmMain.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        try {
-            while(rs.next()) {
-                String no = rs.getString(0);
-                String nama = rs.getString(1);
-                String stasiunAwal = rs.getString(2);
-                String stasiunTujuan = rs.getString(3);
-                
-                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-                String tanggal = dateFormat.format(txtTanggal.getDate());
-                tanggal = rs.getString(4);
-               
-                String jenisKereta = "";
-                
-                if("Ekonomi".equals(rs.getString(5))) {
-                    jenisKereta = "Ekonomi";
-                } else {
-                    jenisKereta = "Eksekutif";
-                }
-                
-                String waktu  = rs.getString(6);
-                String duduk = rs.getString(7);
-                String harga = rs.getString(8);
-                String data[] = {no,nama,stasiunAwal,stasiunTujuan,tanggal,jenisKereta,waktu,duduk,harga};
-                dtm.addRow(data);
-            }
-        } catch (SQLException ex) {
-            Logger.getLogger(frmMain.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        tblData.setModel(dtm);
-    }
+ 
 }
